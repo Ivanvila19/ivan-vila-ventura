@@ -3,85 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Iván Vila Ventura</title>
+  <title>Iván Vila Ventura – Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
     }
 
     header {
-      padding: 60px 20px 20px;
+      padding: 40px 20px 10px;
+      text-align: center;
       font-size: 24px;
       font-weight: 500;
       letter-spacing: 1px;
     }
 
-    h1 {
-      font-size: 18px;
-      font-weight: normal;
-      margin-bottom: 40px;
+    nav {
+      text-align: center;
+      margin: 20px 0 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 20px 60px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    section p {
+      font-size: 15px;
+      font-weight: 300;
     }
 
     form {
-      max-width: 500px;
-      width: 100%;
-      padding: 0 20px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
+      text-align: left;
     }
 
     label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 8px;
+      font-size: 13px;
+      margin-bottom: 4px;
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
-      padding: 10px;
       border: none;
       border-bottom: 1px solid #ccc;
       font-size: 14px;
-      background-color: transparent;
+      padding: 8px 4px;
+      background: transparent;
       color: #000;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus, textarea:focus {
       outline: none;
       border-bottom: 1px solid #000;
     }
 
     button {
       margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #000;
+      padding: 10px;
+      background: #000;
       color: #fff;
       border: none;
       font-size: 14px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #333;
+      background: #333;
     }
 
     footer {
       margin-top: 80px;
       font-size: 12px;
-      color: #888;
+      color: #777;
       text-align: center;
       padding: 20px;
     }
@@ -91,28 +131,45 @@
 
   <header>Iván Vila Ventura</header>
 
-  <h1>Contacto</h1>
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-  <form action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
-    <div>
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required />
+  <section id="portfolio">
+    <div class="gallery">
+      <img src="https://via.placeholder.com/800x600?text=Imagen+1" alt="Imagen 1" />
+      <img src="https://via.placeholder.com/800x600?text=Imagen+2" alt="Imagen 2" />
+      <img src="https://via.placeholder.com/800x600?text=Imagen+3" alt="Imagen 3" />
     </div>
-    <div>
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required />
-    </div>
-    <div>
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-    </div>
-    <button type="submit">Enviar</button>
-  </form>
+  </section>
 
-  <footer>© 2025 Tu Nombre</footer>
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Me llamo Iván Vila Ventura, tengo 20 años. Soy de Madrid y estudio Comunicación Audiovisual. 
+      Me apasiona la fotografía y el cine. Tengo experiencia en fotografía deportiva, sobre todo de fútbol, 
+      en retratos y de motor. Actualmente trabajo en la productora de cine y publicidad 
+      "FinisMundi Producciones".</p>
+  </section>
+
+  <section id="contacto">
+     <section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+       Puedes escribirme a: <strong>ivanvilaphotography@gmail.com</strong>
+       Puedes seguirme en: <strong>ivanvila_photography</strong>
+    </p>
+  </section>
+  </section>
+
+  <footer>
+    © 2025 Iván Vila Ventura. Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
+
 
 
 
