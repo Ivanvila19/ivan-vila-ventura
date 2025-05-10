@@ -59,6 +59,25 @@
       font-weight: 600;
     }
 
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .about-container img {
+      max-width: 300px; /* Aquí ajustamos el tamaño de la imagen */
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-container img:hover {
+      transform: scale(1.05);
+    }
+
     p {
       text-align: center;
       font-size: 18px;
@@ -129,13 +148,13 @@
   </nav>
 
   <h1>Contacto</h1>
-<div class="about-container">
-    <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG_20230716_214210_995.jpg?raw=true" alt="Iván Vila" />
-    <p>
-  <p>Puedes escribirme a: <strong>ivanvilaphotography@gmail.com</strong></p>
-  <p>Sígueme en Instagram: <strong>@ivanvila_photography</strong></p>
 
-  <a href="index.html">← Volver al inicio</a>
+  <div class="about-container">
+    <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG_20230716_214210_995.jpg?raw=true" alt="Iván Vila" />
+    <p>Puedes escribirme a: <strong>ivanvilaphotography@gmail.com</strong></p>
+    <p>Sígueme en Instagram: <strong>@ivanvila_photography</strong></p>
+    <a href="index.html">← Volver al inicio</a>
+  </div>
 
   <footer>
     <div class="social-links">
@@ -147,4 +166,5 @@
   </footer>
 </body>
 </html>
+
 
