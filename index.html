@@ -61,12 +61,12 @@
 
     .gallery-item {
       position: relative;
-      width: 25%; /* Tamaño estándar para todos los apartados */
+      width: 30%; /* Tamaño estándar para todos los apartados */
     }
 
     /* Hacemos que el apartado de Portfolio sea más grande (45%) */
     .gallery-item.portfolio {
-      width: 35%; /* Portfolio es más grande que los demás */
+      width: 45%; /* Portfolio es más grande que los demás */
     }
 
     /* Las imágenes de Sobre mí y Contacto serán del mismo tamaño */
@@ -87,17 +87,15 @@
       transform: scale(1.05);
     }
 
+    /* Mover el texto al pie de la imagen y quitar el fondo */
     .overlay-text {
       position: absolute;
-      top: 50%;
+      bottom: 10px; /* Mover el texto al pie de la imagen */
       left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 20px;
+      transform: translateX(-50%);
+      font-size: 18px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: 300;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
       pointer-events: none;
@@ -129,13 +127,15 @@
     <a href="contacto.html">Contacto</a>
   </nav>
   <div class="gallery">
+    <!-- Portfolio en el centro y más grande (45%) -->
+    <a href="portfolio.html" class="gallery-item portfolio">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
+      <div class="overlay-text">Portfolio</div>
+    </a>
+    <!-- Sobre mí a la izquierda -->
     <a href="sobre-mi.html" class="gallery-item sobre-mi">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
       <div class="overlay-text">Sobre mí</div>
-    </a>
-      <a href="portfolio.html" class="gallery-item portfolio">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
-      <div class="overlay-text">Portfolio</div>
     </a>
     <!-- Contacto a la derecha -->
     <a href="contacto.html" class="gallery-item contacto">
@@ -152,6 +152,8 @@
   </footer>
 </body>
 </html>
+
+
 
 
 
