@@ -80,6 +80,7 @@
       transform: scale(1.05);
     }
 
+    /* Lightbox Styles */
     .lightbox {
       position: fixed;
       top: 0;
@@ -153,6 +154,7 @@
       transform: scale(1.1);
     }
 
+    /* Botón volver al portfolio */
     .back-button {
       display: inline-block;
       padding: 10px 20px;
@@ -194,14 +196,23 @@
 
   <div class="gallery">
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/portrait1.jpg" alt="Portrait 1" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portrait 1" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/portrait2.jpg" alt="Portrait 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3772.jpg?raw=true" alt="Portrait 2" onclick="openLightbox(this.src)">
     </div>
-    <!-- Añade más retratos si lo deseas -->
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8783.JPG?raw=true" alt="Portrait 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8784.JPG?raw=true" alt="Portrait 4" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8790.JPG?raw=true" alt="Portrait 5" onclick="openLightbox(this.src)">
+    </div>
   </div>
 
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <img id="lightbox-img" src="" alt="Imagen ampliada">
   </div>
@@ -227,11 +238,12 @@
     });
   </script>
 
-  <!-- Botón Volver a Portfolio -->
+  <!-- Botón centrado antes del footer -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
+  </div>
+
   <footer>
-    <div style="margin-bottom: 20px;">
-      <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
-    </div>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
@@ -239,6 +251,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
