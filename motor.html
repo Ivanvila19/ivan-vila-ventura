@@ -44,18 +44,32 @@
       opacity: 0.6;
     }
 
+    h1 {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 8px;
     }
 
     .gallery-item img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
-      border-radius: 8px;
       display: block;
       transition: transform 0.3s ease;
     }
@@ -69,42 +83,26 @@
   <header>
     <a href="index.html" style="text-decoration: none; color: #000;">Iván Vila Ventura</a>
   </header>
+
   <nav>
     <a href="portfolio.html">Portfolio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="contacto.html">Contacto</a>
   </nav>
+
   <h1>Motor</h1>
+
   <div class="gallery">
-    <div class="gallery-item">
-      <img src= "https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor 1">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9021.jpg?raw=true" alt="Motor 2">
-    </div>
-    <div class="gallery-item">
-      <img src= "https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9048.jpg?raw=true" alt="Motor 3">
-    </div>
-    <div class="gallery-item">
-      <img src= "https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9060.jpg?raw=true" alt="Motor 4">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5950.jpg?raw=true" alt="Motor 5">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5953.jpg?raw=true" alt="Motor 6">
-    </div>
-      <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5960.jpg?raw=true" alt="Motor 7">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5974.jpg?raw=true" alt="Motor 8">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5977.jpg?raw=true" alt="Motor 9">
-    </div>
-    
-    <!-- Más imágenes -->
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor 1"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9021.jpg?raw=true" alt="Motor 2"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9048.jpg?raw=true" alt="Motor 3"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9060.jpg?raw=true" alt="Motor 4"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5950.jpg?raw=true" alt="Motor 5"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5953.jpg?raw=true" alt="Motor 6"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5960.jpg?raw=true" alt="Motor 7"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5974.jpg?raw=true" alt="Motor 8"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5977.jpg?raw=true" alt="Motor 9"></div>
   </div>
 </body>
 </html>
+
