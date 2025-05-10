@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iván Vila Ventura – Portfolio</title>
   <style>
-    html, body {
-      height: 100%;
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -19,10 +19,7 @@
       line-height: 1.6;
       display: flex;
       flex-direction: column;
-    }
-
-    main {
-      flex: 1 0 auto;
+      min-height: 100vh;
     }
 
     header {
@@ -31,11 +28,6 @@
       font-size: 48px;
       font-weight: 500;
       letter-spacing: 1px;
-    }
-
-    header a {
-      text-decoration: none;
-      color: inherit;
     }
 
     nav {
@@ -60,11 +52,11 @@
       display: flex;
       justify-content: space-between;
       padding: 20px;
+      gap: 20px;
     }
 
     .gallery-item {
       position: relative;
-      width: 30%;
     }
 
     .gallery-item img {
@@ -97,55 +89,178 @@
     }
 
     footer {
-      flex-shrink: 0;
+      margin-top: auto;
       text-align: center;
       padding: 40px 0 20px;
-    }
-
-    footer img {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: #555;
     }
   </style>
 </head>
 <body>
-  <main>
-    <header><a href="index.html">Iván Vila Ventura</a></header>
+  <header><a href="index.html" style="text-decoration: none; color: inherit;">Iván Vila Ventura</a></header>
+  <nav>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 
-    <nav>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="sobre-mi.html">Sobre mí</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-
-    <div class="gallery">
-     
-      <a href="sobre-mi.html" class="gallery-item">
+  <div class="gallery">
+    <a href="portfolio.html" class="gallery-item" style="width: 40%;">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
+      <div class="overlay-text">Portfolio</div>
+    </a>
+    <div style="display: flex; flex-direction: column; justify-content: space-between; width: 55%;">
+      <a href="sobre-mi.html" class="gallery-item" style="width: 100%; margin-bottom: 10px;">
         <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
         <div class="overlay-text">Sobre mí</div>
       </a>
-       <a href="portfolio.html" class="gallery-item">
-        <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
-        <div class="overlay-text">Portfolio</div>
-      </a>
-      <a href="contacto.html" class="gallery-item">
+      <a href="contacto.html" class="gallery-item" style="width: 100%;">
         <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Contacto" />
         <div class="overlay-text">Contacto</div>
       </a>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank" style="display: inline-block; margin-bottom: 10px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;" />
     </a>
-    <p>© 2025 Iván Vila Ventura. All rights reserved.</p>
+    <p style="font-size: 13px; color: #555;">&copy; 2025 Iván Vila Ventura. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Iván Vila Ventura</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      width: 45%;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <header><a href="index.html" style="text-decoration: none; color: inherit;">Iván Vila Ventura</a></header>
+  <nav>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <div class="gallery">
+    <a href="portraits.html" class="gallery-item">
+      <img src="portrait.jpg" alt="Portraits" />
+      <div class="overlay-text">Portraits</div>
+    </a>
+    <a href="sports.html" class="gallery-item">
+      <img src="sports.jpg" alt="Sports" />
+      <div class="overlay-text">Sports</div>
+    </a>
+    <a href="motor.html" class="gallery-item">
+      <img src="motor.jpg" alt="Motor" />
+      <div class="overlay-text">Motor</div>
+    </a>
+    <a href="party.html" class="gallery-item">
+      <img src="party.jpg" alt="Party" />
+      <div class="overlay-text">Party</div>
+    </a>
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank" style="display: inline-block; margin-bottom: 10px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;" />
+    </a>
+    <p style="font-size: 13px; color: #555;">&copy; 2025 Iván Vila Ventura. All rights reserved.</p>
   </footer>
 </body>
 </html>
