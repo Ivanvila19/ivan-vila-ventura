@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Iván Vila Ventura</title>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Portraits</title>
   <style>
     * {
       margin: 0;
@@ -13,25 +12,18 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       background: #fff;
       color: #000;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
       padding: 40px 20px 10px;
       text-align: center;
-    }
-
-    header a {
-      font-family: 'Arizonia', cursive;
-      font-size: 72px;
-      text-decoration: none;
-      color: #000;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: 1px;
     }
 
     nav {
@@ -54,54 +46,101 @@
 
     h1 {
       text-align: center;
-      margin: 30px 0;
-      font-size: 36px;
-      font-weight: 500;
+      margin: 30px 0 10px;
+      font-size: 32px;
+      font-weight: 600;
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .gallery-item {
-      position: relative;
-      width: 45%;
-      max-width: 400px;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     .gallery-item img {
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
+      object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
+      border-radius: 8px;
     }
 
     .gallery-item:hover img {
       transform: scale(1.05);
     }
 
-    .overlay-text {
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .lightbox:after {
+      content: "✕";
       position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 20px;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
       color: white;
-      font-weight: 600;
-      background-color: rgba(0,0,0,0.6);
-      padding: 6px 12px;
-      border-radius: 4px;
+      cursor: pointer;
     }
 
     footer {
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
-      margin-top: auto;
+      margin-top: 40px;
+    }
+
+    footer .social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      transition: opacity 0.3s;
+    }
+
+    footer .social-links a:hover {
+      opacity: 0.6;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
     }
 
     footer img {
@@ -114,31 +153,36 @@
       transform: scale(1.1);
     }
 
-    footer p {
-      font-size: 14px;
-      color: #555;
-      margin-top: 10px;
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      margin: 20px auto;
+      transition: opacity 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .gallery-item {
-        width: 100%;
-      }
+    .back-button:hover {
+      opacity: 0.6;
+    }
 
-      header a {
-        font-size: 48px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 10px;
-        font-size: 16px;
-      }
+    .back-button:active {
+      background-color: #000;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <header><a href="index.html">Iván Vila Ventura</a></header>
+  <header>
+    <a href="index.html" style="text-decoration: none; color: #000;">Iván Vila Ventura</a>
+  </header>
 
   <nav>
     <a href="portfolio.html">Portfolio</a>
@@ -146,35 +190,56 @@
     <a href="contacto.html">Contacto</a>
   </nav>
 
-  <h1>Portfolio</h1>
+  <h1>Portraits</h1>
 
   <div class="gallery">
-    <a href="#" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portraits">
-      <div class="overlay-text">Portraits</div>
-    </a>
-    <a href="#" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports">
-      <div class="overlay-text">Sports</div>
-    </a>
-    <a href="#" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor">
-      <div class="overlay-text">Motor</div>
-    </a>
-    <a href="#" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Party">
-      <div class="overlay-text">Party</div>
-    </a>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/portrait1.jpg" alt="Portrait 1" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/portrait2.jpg" alt="Portrait 2" onclick="openLightbox(this.src)">
+    </div>
+    <!-- Añade más retratos si lo deseas -->
   </div>
 
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV') {
+        document.getElementById('lightbox').classList.remove('active');
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('active');
+      }
+    });
+  </script>
+
+  <!-- Botón Volver a Portfolio -->
   <footer>
+    <div style="margin-bottom: 20px;">
+      <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
+    </div>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
     <p>© 2025 Iván Vila Ventura. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
 
 
 
