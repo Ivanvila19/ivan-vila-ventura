@@ -159,19 +159,28 @@
     .back-button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #000;
-      color: #fff;
+      background-color: transparent;
+      color: #000;
       text-decoration: none;
-      border-radius: 5px;
       font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      border-radius: 5px;
       text-align: center;
       margin: 20px auto;
-      transition: background-color 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     .back-button:hover {
-      background-color: #444;
+      opacity: 0.6;
     }
+
+    .back-button:active {
+      background-color: #000;
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -186,6 +195,11 @@
   </nav>
 
   <h1>Motor</h1>
+
+  <!-- Botón Volver a Portfolio -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-button">Volver a Portfolio</a>
+  </div>
 
   <div class="gallery">
     <!-- Repite este bloque por cada imagen -->
@@ -245,10 +259,6 @@
       }
     });
   </script>
-  <!-- Botón Volver a Portfolio -->
-  <div style="text-align: center;">
-    <a href="index.html" class="back-button">Volver a Portfolio</a>
-  </div>
 
   <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
@@ -258,6 +268,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
