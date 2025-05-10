@@ -62,7 +62,7 @@
 
     .portfolio-item {
       position: relative;
-      width: calc(50% - 20px); /* Dos columnas con espacio entre ellas */
+      width: calc(50% - 20px);
     }
 
     .portfolio-item img {
@@ -78,6 +78,17 @@
       transform: scale(1.03);
     }
 
+    /* Fondo oscuro semitransparente debajo del texto */
+    .overlay-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
+      border-radius: 0 0 8px 8px;
+    }
+
     .overlay-text {
       position: absolute;
       bottom: 10px;
@@ -89,6 +100,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       pointer-events: none;
+      z-index: 1;
     }
 
     footer {
@@ -119,19 +131,23 @@
 
   <div class="portfolio-gallery">
     <a href="portraits.html" class="portfolio-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portraits" />
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3772.jpg?raw=true" alt="Portraits" />
+      <div class="overlay-bar"></div>
       <div class="overlay-text">Portraits</div>
     </a>
     <a href="sports.html" class="portfolio-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports" />
+      <div class="overlay-bar"></div>
       <div class="overlay-text">Sports</div>
     </a>
     <a href="motor.html" class="portfolio-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor" />
+      <div class="overlay-bar"></div>
       <div class="overlay-text">Motor</div>
     </a>
     <a href="party.html" class="portfolio-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Party" />
+      <div class="overlay-bar"></div>
       <div class="overlay-text">Party</div>
     </a>
   </div>
@@ -144,6 +160,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
