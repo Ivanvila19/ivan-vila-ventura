@@ -20,222 +20,150 @@
 
     header {
       padding: 40px 20px 10px;
-      text-align: center;
-      font-size: 24px;
+      text-align: left;
+      font-size: 20px;
       font-weight: 500;
       letter-spacing: 1px;
     }
 
-    nav {
-      text-align: center;
-      margin: 20px 0 60px;
+    .main-gallery {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 20px;
     }
 
-    nav a {
-      margin: 0 15px;
+    .main-gallery .gallery-item {
+      position: relative;
+      width: 33.33%;
+      overflow: hidden;
+      border-radius: 8px;
       text-decoration: none;
-      color: #000;
-      font-size: 14px;
-      font-weight: 400;
-      transition: opacity 0.3s;
     }
 
-    nav a:hover {
-      opacity: 0.6;
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
     }
 
-   .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 0 20px 60px;
-}
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
 
-.gallery-item {
-  position: relative;
-  width: calc(25% - 15px); /* 4 por fila, ajusta el valor si quieres 3 (33.33% - gap) */
-  overflow: hidden;
-  border-radius: 8px;
-  display: block;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  pointer-events: none;
-}
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
 
     section {
       padding: 60px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
 
     section h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 30px;
       font-weight: 500;
     }
 
-    section p {
-      font-size: 15px;
-      font-weight: 300;
-    }
-
-    form {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
+    .portfolio-subgallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      text-align: left;
     }
 
-    label {
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
-    input, textarea {
+    .portfolio-subgallery img {
       width: 100%;
-      border: none;
-      border-bottom: 1px solid #ccc;
-      font-size: 14px;
-      padding: 8px 4px;
-      background: transparent;
-      color: #000;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
-    input:focus, textarea:focus {
-      outline: none;
-      border-bottom: 1px solid #000;
-    }
-
-    button {
+    #sobre-mi img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
       margin-top: 20px;
-      padding: 10px;
-      background: #000;
-      color: #fff;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
     }
 
-    button:hover {
-      background: #333;
+    #contacto p {
+      margin-bottom: 10px;
+      font-size: 16px;
     }
 
     footer {
-      margin-top: 80px;
+      margin-top: 60px;
       font-size: 12px;
       color: #777;
       text-align: center;
       padding: 20px;
     }
-  .gallery-item {
-    position: relative;
-    display: block;
-    overflow: hidden;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    pointer-events: none;
-  }
-</style>
+  </style>
 </head>
 <body>
 
   <header>Iván Vila Ventura</header>
 
-  <nav>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="portfolio">
-  <div class="gallery">
-    <a href="#Portrait" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portraits" />
-      <div class="overlay-text">Portraits</div>
+  <!-- Galería principal -->
+  <div class="main-gallery">
+    <a href="#portfolio" class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg" alt="Portfolio" />
+      <div class="overlay-text">Portfolio</div>
     </a>
-    <a href="#Sports" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports" />
-      <div class="overlay-text">Sports</div>
+    <a href="#sobre-mi" class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG" alt="Sobre mí" />
+      <div class="overlay-text">Sobre mí</div>
     </a>
-    <a href="#Motor" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor" />
-      <div class="overlay-text">Motor</div>
-        </a>
-      <a href="#Party" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Party" />
-      <div class="overlay-text">Party</div>
+    <a href="#contacto" class="gallery-item">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg" alt="Contacto" />
+      <div class="overlay-text">Contacto</div>
     </a>
   </div>
-</section>
 
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-subgallery">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg" alt="Retrato">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG" alt="Deporte">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg" alt="Motor">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg" alt="Fiesta">
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Me llamo Iván Vila Ventura, tengo 20 años. Soy de Madrid y estudio Comunicación Audiovisual. 
-      Me apasiona la fotografía y el cine. Tengo experiencia en fotografía deportiva, sobre todo de fútbol, 
+    <p>
+      Me llamo Iván Vila Ventura, tengo 20 años. Soy de Madrid y estudio Comunicación Audiovisual.
+      Me apasiona la fotografía y el cine. Tengo experiencia en fotografía deportiva, sobre todo de fútbol,
       en retratos y de motor. Actualmente trabajo en la productora de cine y publicidad 
-      "FinisMundi Producciones".</p>
+      "FinisMundi Producciones".
+    </p>
+    <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg" alt="Iván Vila Ventura">
   </section>
 
+  <!-- Contacto -->
   <section id="contacto">
-     <section id="contacto">
     <h2>Contacto</h2>
-    <p>
-       Puedes escribirme a: <strong>ivanvilaphotography@gmail.com</strong>
-       Puedes seguirme en: <strong>ivanvila_photography</strong>
-    </p>
-  </section>
+    <p>Email: <strong>ivanvilaphotography@gmail.com</strong></p>
+    <p>Instagram: <strong>@ivanvila_photography</strong></p>
   </section>
 
   <footer>
@@ -244,6 +172,7 @@
 
 </body>
 </html>
+
 
 
 
