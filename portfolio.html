@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Iván Vila Ventura</title>
-  <!-- Google Fonts -->
+  <title>Iván Vila Ventura – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -31,14 +30,11 @@
       color: #333;
     }
 
-    /* Estilo específico para el nombre "Iván Vila Ventura" */
     header a {
-      font-family: 'Arizonia', cursive; /* Aplicar la tipografía Arizonia */
-      font-size: 72px; /* Tamaño de fuente */
-      color: #000; /* Color negro */
-      text-decoration: none; /* Sin subrayado */
+      text-decoration: none;
+      color: inherit;
+      font-family: 'Arizonia', cursive;
     }
-
 
     nav {
       text-align: center;
@@ -58,20 +54,29 @@
       opacity: 0.6;
     }
 
-    .portfolio-gallery {
+    .gallery {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      align-items: flex-start;
+      gap: 2.5%;
       padding: 20px;
+      flex-wrap: wrap;
     }
 
-    .portfolio-item {
+    .gallery-item {
       position: relative;
-      width: calc(50% - 20px);
     }
 
-    .portfolio-item img {
+    .gallery-item.portfolio {
+      width: 35%;
+    }
+
+    .gallery-item.sobre-mi,
+    .gallery-item.contacto {
+      width: 27.5%;
+    }
+
+    .gallery-item img {
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -80,18 +85,8 @@
       transition: transform 0.3s ease;
     }
 
-    .portfolio-item:hover img {
-      transform: scale(1.03);
-    }
-
-    .overlay-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: #000;
-      border-radius: 0 0 8px 8px;
+    .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
     .overlay-text {
@@ -105,54 +100,107 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       pointer-events: none;
-      z-index: 1;
-    }
-
-    a {
-      display: inline-block;
-      text-align: center;
-      color: #000;
-      font-size: 18px;
-      font-weight: 400;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-
-    a:hover {
-      opacity: 0.6;
-    }
-
-    .volver-inicio {
-      display: inline-block;
-      text-align: center;
-      color: #000;
-      font-size: 18px;
-      font-weight: 400;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-
-    .volver-inicio:hover {
-      opacity: 0.6;
     }
 
     footer {
+      background-color: #f1f1f1;
       text-align: center;
-      margin-top: auto;
-      padding: 60px 0 20px;
+      padding: 20px;
+      margin-top: 40px;
     }
 
-    footer a img {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 10px;
+    footer .social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      transition: opacity 0.3s;
+    }
+
+    footer .social-links a:hover {
+      opacity: 0.6;
     }
 
     footer p {
-      font-size: 13px;
+      font-size: 14px;
       color: #555;
+      margin-top: 10px;
+    }
+
+    footer img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    footer img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Media Queries para mejorar la experiencia en dispositivos móviles */
+    @media (max-width: 768px) {
+      header {
+        font-size: 48px; /* Reducir el tamaño de la fuente en pantallas medianas */
+      }
+
+      .gallery {
+        gap: 15px;
+      }
+
+      .gallery-item.portfolio {
+        width: 45%;
+      }
+
+      .gallery-item.sobre-mi,
+      .gallery-item.contacto {
+        width: 45%;
+      }
+
+      .overlay-text {
+        font-size: 16px;
+      }
+
+      nav a {
+        font-size: 16px; /* Reducir el tamaño de los enlaces en la navegación */
+      }
+
+      footer .social-links a {
+        font-size: 18px; /* Reducir el tamaño de los enlaces sociales */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 32px; /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+        padding: 30px 15px;
+      }
+
+      .gallery {
+        gap: 10px;
+      }
+
+      .gallery-item.portfolio,
+      .gallery-item.sobre-mi,
+      .gallery-item.contacto {
+        width: 90%; /* Hacer las imágenes más grandes en pantallas pequeñas */
+      }
+
+      .overlay-text {
+        font-size: 14px;
+      }
+
+      nav a {
+        font-size: 14px; /* Reducir aún más el tamaño de los enlaces en móviles */
+      }
+
+      footer p {
+        font-size: 12px;
+      }
+
+      footer img {
+        width: 30px; /* Reducir el tamaño de los íconos sociales */
+        height: 30px;
+      }
     }
   </style>
 </head>
@@ -164,30 +212,22 @@
     <a href="contacto.html">Contacto</a>
   </nav>
 
-  <div class="portfolio-gallery">
-    <a href="portraits.html" class="portfolio-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portraits" />
-      <div class="overlay-bar"></div>
-      <div class="overlay-text">Portraits</div>
+  <div class="gallery">
+    <a href="sobre-mi.html" class="gallery-item sobre-mi">
+      <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20250103-WA0008.jpg?raw=true" alt="Sobre mí" />
+      <div class="overlay-text">Sobre mí</div>
     </a>
-    <a href="sports.html" class="portfolio-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports" />
-      <div class="overlay-bar"></div>
-      <div class="overlay-text">Sports</div>
+
+    <a href="portfolio.html" class="gallery-item portfolio">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Portfolio" />
+      <div class="overlay-text">Portfolio</div>
     </a>
-    <a href="motor.html" class="portfolio-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Motor" />
-      <div class="overlay-bar"></div>
-      <div class="overlay-text">Motor</div>
-    </a>
-    <a href="party.html" class="portfolio-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Party" />
-      <div class="overlay-bar"></div>
-      <div class="overlay-text">Party</div>
+
+    <a href="contacto.html" class="gallery-item contacto">
+      <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20230717-WA0018.jpg?raw=true" alt="Contacto" />
+      <div class="overlay-text">Contacto</div>
     </a>
   </div>
-
-  <a href="index.html" class="volver-inicio">← Volver al inicio</a>
 
   <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
@@ -197,6 +237,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
