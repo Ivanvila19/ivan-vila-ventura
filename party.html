@@ -155,29 +155,32 @@
       transform: scale(1.1); /* Efecto de hover */
     }
 
-    /* Volver al portfolio centrado */
-    .volver-portfolio {
+    /* Estilos del botón "Volver a Portfolio" */
+    .back-button {
       display: inline-block;
-      text-align: center;
+      padding: 10px 20px;
+      background-color: transparent;
       color: #000;
+      text-decoration: none;
       font-size: 18px;
       font-weight: 400;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: opacity 0.3s;
-      margin-left: auto;
-      margin-right: auto;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      margin: 20px auto;
+      transition: opacity 0.3s ease;
     }
 
-    .volver-portfolio:hover {
+    .back-button:hover {
       opacity: 0.6;
     }
 
-    /* Asegurando que el enlace esté centrado en su contenedor */
-    .volver-container {
-      text-align: center;
-      margin-top: 40px;
+    .back-button:active {
+      background-color: #000;
+      color: #fff;
     }
+
   </style>
 </head>
 <body>
