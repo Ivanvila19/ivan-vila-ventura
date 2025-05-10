@@ -80,7 +80,6 @@
       transform: scale(1.05);
     }
 
-    /* Lightbox Styles */
     .lightbox {
       position: fixed;
       top: 0;
@@ -144,41 +143,40 @@
       margin-top: 10px;
     }
 
-    /* Instagram image size */
     footer img {
-      width: 40px; /* Ajustamos el tamaño de la imagen de Instagram */
+      width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
     }
 
     footer img:hover {
-      transform: scale(1.1); /* Efecto de hover */
+      transform: scale(1.1);
     }
 
-    /* Volver al portfolio centrado */
-    .volver-portfolio {
+    .back-button {
       display: inline-block;
-      text-align: center;
+      padding: 10px 20px;
+      background-color: transparent;
       color: #000;
+      text-decoration: none;
       font-size: 18px;
       font-weight: 400;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: opacity 0.3s;
-      margin-left: auto;
-      margin-right: auto;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      margin: 20px auto;
+      transition: opacity 0.3s ease;
     }
 
-    .volver-portfolio:hover {
+    .back-button:hover {
       opacity: 0.6;
     }
 
-    /* Asegurando que el enlace esté centrado en su contenedor */
-    .volver-container {
-      text-align: center;
-      margin-top: 40px;
+    .back-button:active {
+      background-color: #000;
+      color: #fff;
     }
-
   </style>
 </head>
 <body>
@@ -195,7 +193,6 @@
   <h1>Portraits</h1>
 
   <div class="gallery">
-    <!-- Repite este bloque por cada imagen -->
     <div class="gallery-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portrait 1" onclick="openLightbox(this.src)">
     </div>
@@ -213,7 +210,6 @@
     </div>
   </div>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <img id="lightbox-img" src="" alt="Imagen ampliada">
   </div>
@@ -232,7 +228,6 @@
       }
     }
 
-    // Cerrar con la tecla ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('lightbox').classList.remove('active');
@@ -240,12 +235,11 @@
     });
   </script>
 
-  <!-- Volver al portfolio centrado -->
-  <div class="volver-container">
-    <a href="portfolio.html" class="volver-portfolio">← Volver al Portfolio</a>
-  </div>
-
-  <footer>
+ 
+    <div style="margin-bottom: 20px;">
+      <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
+    </div>
+   <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
