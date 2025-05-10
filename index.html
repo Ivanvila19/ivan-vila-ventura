@@ -137,6 +137,73 @@
     footer img:hover {
       transform: scale(1.1);
     }
+
+    /* Media Queries para mejorar la experiencia en dispositivos móviles */
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 48px; /* Reducir el tamaño de la fuente en pantallas medianas */
+      }
+
+      .gallery {
+        gap: 15px;
+      }
+
+      .gallery-item.portfolio {
+        width: 45%;
+      }
+
+      .gallery-item.sobre-mi,
+      .gallery-item.contacto {
+        width: 45%;
+      }
+
+      .overlay-text {
+        font-size: 16px;
+      }
+
+      nav a {
+        font-size: 16px; /* Reducir el tamaño de los enlaces en la navegación */
+      }
+
+      footer .social-links a {
+        font-size: 18px; /* Reducir el tamaño de los enlaces sociales */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 32px; /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+        padding: 30px 15px;
+      }
+
+      .gallery {
+        gap: 10px;
+      }
+
+      .gallery-item.portfolio,
+      .gallery-item.sobre-mi,
+      .gallery-item.contacto {
+        width: 90%; /* Hacer las imágenes más grandes en pantallas pequeñas */
+      }
+
+      .overlay-text {
+        font-size: 14px;
+      }
+
+      nav a {
+        font-size: 14px; /* Reducir aún más el tamaño de los enlaces en móviles */
+      }
+
+      footer p {
+        font-size: 12px;
+      }
+
+      footer img {
+        width: 30px; /* Reducir el tamaño de los íconos sociales */
+        height: 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -154,7 +221,7 @@
     </a>
 
     <a href="portfolio.html" class="gallery-item portfolio">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Portfolio" />
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Portfolio" />
       <div class="overlay-text">Portfolio</div>
     </a>
 
@@ -172,6 +239,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
