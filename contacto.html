@@ -31,14 +31,13 @@
       color: #333;
     }
 
-     /* Estilo específico para el nombre "Iván Vila Ventura" */
+    /* Estilo específico para el nombre "Iván Vila Ventura" */
     header a {
-      font-family: 'Arizonia', cursive; /* Aplicar la tipografía Arizonia */
-      font-size: 72px; /* Tamaño de fuente */
-      color: #000; /* Color negro */
-      text-decoration: none; /* Sin subrayado */
+      font-family: 'Arizonia', cursive;
+      font-size: 72px;
+      color: #000;
+      text-decoration: none;
     }
-
 
     nav {
       text-align: center;
@@ -138,6 +137,72 @@
     footer img:hover {
       transform: scale(1.1);
     }
+
+    /* Media Queries para mejorar la experiencia en dispositivos móviles */
+    @media (max-width: 768px) {
+      header {
+        font-size: 48px; /* Ajuste de tamaño para pantallas medianas */
+      }
+
+      nav a {
+        font-size: 16px; /* Reducir el tamaño de los enlaces en la navegación */
+      }
+
+      h1 {
+        font-size: 28px; /* Ajustar el tamaño del título */
+      }
+
+      .about-container img {
+        max-width: 250px; /* Reducir el tamaño de la imagen */
+      }
+
+      .about-container p {
+        font-size: 16px; /* Ajustar el tamaño del texto */
+        max-width: 700px;
+      }
+
+      footer p {
+        font-size: 12px; /* Ajuste del tamaño del texto en el pie de página */
+      }
+
+      footer img {
+        width: 35px; /* Reducir el tamaño de los iconos sociales */
+        height: 35px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 32px; /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+        padding: 30px 15px;
+      }
+
+      nav a {
+        font-size: 14px; /* Reducir aún más el tamaño de los enlaces en móviles */
+      }
+
+      h1 {
+        font-size: 24px; /* Ajuste del tamaño del título en pantallas pequeñas */
+      }
+
+      .about-container img {
+        max-width: 200px; /* Reducir aún más el tamaño de la imagen */
+      }
+
+      .about-container p {
+        font-size: 14px; /* Reducir el tamaño del texto en pantallas pequeñas */
+        max-width: 90%;
+      }
+
+      footer p {
+        font-size: 10px; /* Ajustar el tamaño del texto del pie de página */
+      }
+
+      footer img {
+        width: 30px; /* Reducir el tamaño de los iconos sociales */
+        height: 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -170,6 +235,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
