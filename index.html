@@ -44,23 +44,26 @@
       opacity: 0.6;
     }
 
-    /* Estilo para la galería (imágenes en fila) */
-.gallery {
+   .gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
   padding: 0 20px 60px;
 }
 
 .gallery-item {
   position: relative;
-  width: 32%; /* Ajusta el porcentaje para que se acomoden en la misma fila */
+  width: calc(25% - 15px); /* 4 por fila, ajusta el valor si quieres 3 (33.33% - gap) */
+  overflow: hidden;
+  border-radius: 8px;
+  display: block;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 300px; /* Establece la altura fija para que las imágenes sean del mismo tamaño */
-  object-fit: cover; /* Asegura que las imágenes se ajusten y recorten si es necesario */
-  border-radius: 8px;
+  height: 300px;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -84,8 +87,6 @@
   letter-spacing: 1px;
   pointer-events: none;
 }
-
-    }
 
     section {
       padding: 60px 20px;
