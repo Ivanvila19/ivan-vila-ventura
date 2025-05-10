@@ -11,11 +11,21 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       font-family: 'Helvetica Neue', sans-serif;
       background: #fff;
       color: #000;
       line-height: 1.6;
+    }
+
+    main {
+      flex: 1;
     }
 
     header {
@@ -83,40 +93,58 @@
       letter-spacing: 1px;
       pointer-events: none;
     }
+
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+
+    footer img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-  <header>Iván Vila Ventura</header>
-  <nav>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="sobre-mi.html">Sobre mí</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-  <div class="gallery">
-    <a href="portfolio.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
-      <div class="overlay-text">Portfolio</div>
-    </a>
-    <a href="sobre-mi.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
-      <div class="overlay-text">Sobre mí</div>
-    </a>
-    <a href="contacto.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Contacto" />
-      <div class="overlay-text">Contacto</div>
-    </a>
-  </div>
-   <footer style="text-align: center; padding: 40px 0 20px; margin-top: auto;">
-    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank" style="display: inline-block; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;" />
-    </a>
-    <p style="font-size: 13px; color: #555;">© 2025 Iván Vila Ventura. All rights reserved.</p>
-  </footer>
+  <main>
+    <header>
+      <a href="index.html" style="text-decoration: none; color: inherit;">Iván Vila Ventura</a>
+    </header>
+    <nav>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="gallery">
+      <a href="portfolio.html" class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
+        <div class="overlay-text">Portfolio</div>
+      </a>
+      <a href="sobre-mi.html" class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
+        <div class="overlay-text">Sobre mí</div>
+      </a>
+      <a href="contacto.html" class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Contacto" />
+        <div class="overlay-text">Contacto</div>
+      </a>
+    </div>
+  </main>
 
+  <footer>
+    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <p>© 2025 Iván Vila Ventura. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
-
 
 
 
