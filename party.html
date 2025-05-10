@@ -146,13 +146,13 @@
 
     /* Instagram image size */
     footer img {
-      width: 40px; /* Ajustamos el tamaño de la imagen de Instagram */
+      width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
     }
 
     footer img:hover {
-      transform: scale(1.1); /* Efecto de hover */
+      transform: scale(1.1);
     }
 
     /* Estilos del botón "Volver a Portfolio" */
@@ -197,7 +197,6 @@
   <h1>Party</h1>
 
   <div class="gallery">
-    <!-- Repite este bloque por cada imagen -->
     <div class="gallery-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Party 1" onclick="openLightbox(this.src)">
     </div>
@@ -210,7 +209,6 @@
     <div class="gallery-item">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_8672.jpg?raw=true" alt="Party 4" onclick="openLightbox(this.src)">
     </div>
-    <!-- Más imágenes -->
   </div>
 
   <!-- Lightbox -->
@@ -232,7 +230,6 @@
       }
     }
 
-    // Cerrar con la tecla ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('lightbox').classList.remove('active');
@@ -240,12 +237,11 @@
     });
   </script>
 
-  <!-- Volver al portfolio centrado -->
-  <div class="volver-container">
-    <a href="portfolio.html" class="volver-portfolio">← Volver al Portfolio</a>
-  </div>
-
+  <!-- Botón Volver a Portfolio (antes del icono de Instagram) -->
   <footer>
+    <div style="margin-bottom: 20px;">
+      <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
+    </div>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
@@ -253,5 +249,6 @@
   </footer>
 </body>
 </html>
+
 
 
