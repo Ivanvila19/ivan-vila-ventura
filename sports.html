@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sports</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,7 +14,7 @@
     }
 
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #fff;
       color: #000;
       line-height: 1.6;
@@ -21,9 +23,14 @@
     header {
       padding: 40px 20px 10px;
       text-align: center;
-      font-size: 48px;
-      font-weight: 500;
-      letter-spacing: 1px;
+      font-size: 72px;
+      font-weight: 400;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #000;
+      font-family: 'Arizonia', cursive;
     }
 
     nav {
@@ -80,7 +87,6 @@
       transform: scale(1.05);
     }
 
-    /* Lightbox Styles */
     .lightbox {
       position: fixed;
       top: 0;
@@ -144,18 +150,16 @@
       margin-top: 10px;
     }
 
-    /* Instagram image size */
     footer img {
-      width: 40px; /* Ajustamos el tamaño de la imagen de Instagram */
+      width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
     }
 
     footer img:hover {
-      transform: scale(1.1); /* Efecto de hover */
+      transform: scale(1.1);
     }
 
-    /* Botón volver al portfolio */
     .back-button {
       display: inline-block;
       padding: 10px 20px;
@@ -184,7 +188,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html" style="text-decoration: none; color: #000;">Iván Vila Ventura</a>
+    <a href="index.html">Iván Vila Ventura</a>
   </header>
 
   <nav>
@@ -196,28 +200,15 @@
   <h1>Sports</h1>
 
   <div class="gallery">
-    <!-- Repite este bloque por cada imagen -->
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports 1" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_0665%201.JPG?raw=true" alt="Sports 2" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_1619.JPG?raw=true" alt="Sports 3" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_2463.JPG?raw=true" alt="Sports 4" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3198.JPG?raw=true" alt="Sports 5" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_1419.JPG?raw=true" alt="Sports 6" onclick="openLightbox(this.src)">
-    </div>
+    <!-- Imágenes -->
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sports 1" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_0665%201.JPG?raw=true" alt="Sports 2" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_1619.JPG?raw=true" alt="Sports 3" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_2463.JPG?raw=true" alt="Sports 4" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3198.JPG?raw=true" alt="Sports 5" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_1419.JPG?raw=true" alt="Sports 6" onclick="openLightbox(this.src)"></div>
   </div>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <img id="lightbox-img" src="" alt="Imagen ampliada">
   </div>
@@ -236,7 +227,6 @@
       }
     }
 
-    // Cerrar con la tecla ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('lightbox').classList.remove('active');
@@ -244,7 +234,6 @@
     });
   </script>
 
-  <!-- Botón centrado antes del footer -->
   <div style="text-align: center; margin-top: 40px;">
     <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
   </div>
