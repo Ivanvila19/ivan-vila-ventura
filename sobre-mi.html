@@ -5,26 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí</title>
   <style>
-    /* Estilos específicos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .about-container img {
+      max-width: 300px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-container p {
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .about-container a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 20px;
+      transition: opacity 0.3s;
+    }
+
+    .about-container a:hover {
+      opacity: 0.6;
+    }
   </style>
 </head>
 <body>
-   <header>
-    <a href="index.html" style="text-decoration: none; color: #000;">Iván Vila Ventura</a>
+  <header>
+    <a href="index.html">Iván Vila Ventura</a>
   </header>
   <nav>
     <a href="portfolio.html">Portfolio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="contacto.html">Contacto</a>
   </nav>
+
   <h1>Sobre mí</h1>
-  <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Iván Vila" style="max-width:300px;" />
-  <p>
-    Me llamo Iván Vila Ventura, tengo 20 años. Soy de Madrid y estudio Comunicación Audiovisual.
-    Me apasiona la fotografía y el cine. Tengo experiencia en fotografía deportiva, sobre todo de fútbol,
-    en retratos y de motor. Actualmente trabajo en la productora de cine y publicidad "FinisMundi Producciones".
-  </p>
-  <a href="index.html">← Volver al inicio</a>
+
+  <div class="about-container">
+    <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Iván Vila" />
+    <p>
+      Me llamo Iván Vila Ventura, tengo 20 años. Soy de Madrid y estudio Comunicación Audiovisual.
+      Me apasiona la fotografía y el cine. Tengo experiencia en fotografía deportiva, sobre todo de fútbol,
+      en retratos y de motor. Actualmente trabajo en la productora de cine y publicidad "FinisMundi Producciones".
+    </p>
+    <a href="index.html">← Volver al inicio</a>
+  </div>
 </body>
 </html>
 
