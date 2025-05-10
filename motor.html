@@ -118,7 +118,8 @@
       color: white;
       cursor: pointer;
     }
-     footer {
+
+    footer {
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
@@ -153,6 +154,24 @@
     footer img:hover {
       transform: scale(1.1); /* Efecto de hover */
     }
+
+    /* Estilos del botón "Volver a Portfolio" */
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      margin: 20px auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
   </style>
 </head>
 <body>
@@ -161,7 +180,7 @@
   </header>
 
   <nav>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html">Portfolio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="contacto.html">Contacto</a>
   </nav>
@@ -177,25 +196,25 @@
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9021.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src= "https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9048.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src= "https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9048.jpg?raw=true" alt="Motor 3" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9060.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_9060.jpg?raw=true" alt="Motor 4" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5950.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5950.jpg?raw=true" alt="Motor 5" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5953.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5953.jpg?raw=true" alt="Motor 6" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5960.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5960.jpg?raw=true" alt="Motor 7" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5974.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5974.jpg?raw=true" alt="Motor 8" onclick="openLightbox(this.src)">
     </div>
     <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5977.jpg?raw=true" alt="Motor 2" onclick="openLightbox(this.src)">
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5977.jpg?raw=true" alt="Motor 9" onclick="openLightbox(this.src)">
     </div>
     <!-- Añade más imágenes como las de arriba -->
   </div>
@@ -226,8 +245,12 @@
       }
     });
   </script>
-   </div>
-   <footer>
+  <!-- Botón Volver a Portfolio -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-button">Volver a Portfolio</a>
+  </div>
+
+  <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
