@@ -61,17 +61,17 @@
 
     .gallery-item {
       position: relative;
-      width: 30%;
+      width: 30%; /* Tamaño estándar para todos los apartados */
     }
 
-    /* Hacemos que la imagen de Portfolio sea más grande */
+    /* Hacemos que el apartado de Portfolio sea más grande, pero no demasiado */
     .gallery-item.portfolio {
-      width: 55%; /* Este valor lo puedes ajustar para hacerlo más grande */
+      width: 35%; /* Portfolio es un poco más grande que los demás */
     }
 
-    /* Iguala las imágenes de Sobre mí y Contacto */
+    /* Las imágenes de Sobre mí y Contacto serán del mismo tamaño */
     .gallery-item.sobre-mi, .gallery-item.contacto {
-      width: 22%; /* Un tamaño más pequeño */
+      width: 30%; /* Los mismos tamaños para Sobre mí y Contacto */
     }
 
     .gallery-item img {
@@ -129,14 +129,17 @@
     <a href="contacto.html">Contacto</a>
   </nav>
   <div class="gallery">
+    <!-- Portfolio en el centro y más grande -->
     <a href="portfolio.html" class="gallery-item portfolio">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
       <div class="overlay-text">Portfolio</div>
     </a>
+    <!-- Sobre mí a la izquierda -->
     <a href="sobre-mi.html" class="gallery-item sobre-mi">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
       <div class="overlay-text">Sobre mí</div>
     </a>
+    <!-- Contacto a la derecha -->
     <a href="contacto.html" class="gallery-item contacto">
       <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Contacto" />
       <div class="overlay-text">Contacto</div>
@@ -151,5 +154,6 @@
   </footer>
 </body>
 </html>
+
 
 
