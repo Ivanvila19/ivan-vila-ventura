@@ -118,7 +118,8 @@
       color: white;
       cursor: pointer;
     }
-     footer {
+
+    footer {
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
@@ -152,6 +153,30 @@
 
     footer img:hover {
       transform: scale(1.1); /* Efecto de hover */
+    }
+
+    /* Volver al portfolio centrado */
+    .volver-portfolio {
+      display: inline-block;
+      text-align: center;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .volver-portfolio:hover {
+      opacity: 0.6;
+    }
+
+    /* Asegurando que el enlace esté centrado en su contenedor */
+    .volver-container {
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -211,8 +236,13 @@
       }
     });
   </script>
-   </div>
-   <footer>
+
+  <!-- Volver al portfolio centrado -->
+  <div class="volver-container">
+    <a href="portfolio.html" class="volver-portfolio">← Volver al Portfolio</a>
+  </div>
+
+  <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
@@ -220,4 +250,5 @@
   </footer>
 </body>
 </html>
+
 
