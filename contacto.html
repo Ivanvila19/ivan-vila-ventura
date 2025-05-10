@@ -5,27 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto</title>
   <style>
-    /* Estilos específicos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    a {
+      display: inline-block;
+      text-align: center;
+      color: #000;
+      font-size: 16px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer .social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      transition: opacity 0.3s;
+    }
+
+    footer .social-links a:hover {
+      opacity: 0.6;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Instagram image size */
+    footer img {
+      width: 40px; /* Ajustamos el tamaño de la imagen de Instagram */
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    footer img:hover {
+      transform: scale(1.1); /* Efecto de hover */
+    }
   </style>
 </head>
 <body>
   <header>
-    <a href="index.html" style="text-decoration: none; color: #000;">Iván Vila Ventura</a>
+    <a href="index.html">Iván Vila Ventura</a>
   </header>
+
   <nav>
     <a href="portfolio.html">Portfolio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="contacto.html">Contacto</a>
   </nav>
+
   <h1>Contacto</h1>
+
   <p>Puedes escribirme a: <strong>ivanvilaphotography@gmail.com</strong></p>
   <p>Sígueme en Instagram: <strong>@ivanvila_photography</strong></p>
+
   <a href="index.html">← Volver al inicio</a>
-   </div>
-   <footer>
-    <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    </a>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+    </div>
     <p>© 2025 Iván Vila Ventura. All rights reserved.</p>
   </footer>
 </body>
