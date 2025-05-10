@@ -19,23 +19,23 @@
     }
 
     header {
-      text-align: center;
       padding: 40px 20px 10px;
-      font-size: 24px;
+      text-align: center;
+      font-size: 48px;
       font-weight: 500;
       letter-spacing: 1px;
     }
 
     nav {
       text-align: center;
-      margin: 20px 0 60px;
+      margin: 20px 0;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #000;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       transition: opacity 0.3s;
     }
@@ -44,25 +44,22 @@
       opacity: 0.6;
     }
 
-    .main-gallery {
+    .gallery {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 0 20px 60px;
+      justify-content: space-between;
+      padding: 20px;
     }
 
     .gallery-item {
       position: relative;
       width: 30%;
-      overflow: hidden;
-      border-radius: 8px;
-      text-decoration: none;
     }
 
     .gallery-item img {
       width: 100%;
-      height: 250px;
+      height: auto;
       object-fit: cover;
+      border-radius: 8px;
       display: block;
       transition: transform 0.3s ease;
     }
@@ -86,45 +83,29 @@
       letter-spacing: 1px;
       pointer-events: none;
     }
-
-    footer {
-      margin-top: 80px;
-      font-size: 12px;
-      color: #777;
-      text-align: center;
-      padding: 20px;
-    }
   </style>
 </head>
 <body>
-
   <header>Iván Vila Ventura</header>
-
   <nav>
     <a href="portfolio.html">Portfolio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="contacto.html">Contacto</a>
   </nav>
-
-  <div class="main-gallery">
+  <div class="gallery">
     <a href="portfolio.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg" alt="Portfolio" />
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portfolio" />
       <div class="overlay-text">Portfolio</div>
     </a>
     <a href="sobre-mi.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG" alt="Sobre mí" />
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3387.JPG?raw=true" alt="Sobre mí" />
       <div class="overlay-text">Sobre mí</div>
     </a>
     <a href="contacto.html" class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg" alt="Contacto" />
+      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_5979.jpg?raw=true" alt="Contacto" />
       <div class="overlay-text">Contacto</div>
     </a>
   </div>
-
-  <footer>
-    © 2025 Iván Vila Ventura. Todos los derechos reservados.
-  </footer>
-
 </body>
 </html>
 
