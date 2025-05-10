@@ -23,6 +23,12 @@
       min-height: 100vh;
     }
 
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     header {
       padding: 40px 20px 10px;
       text-align: center;
@@ -107,7 +113,6 @@
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
     }
 
     footer .social-links a {
@@ -138,11 +143,9 @@
       transform: scale(1.1);
     }
 
-    /* Media Queries para mejorar la experiencia en dispositivos móviles */
-
     @media (max-width: 768px) {
       header {
-        font-size: 48px; /* Reducir el tamaño de la fuente en pantallas medianas */
+        font-size: 48px;
       }
 
       .gallery {
@@ -163,17 +166,17 @@
       }
 
       nav a {
-        font-size: 16px; /* Reducir el tamaño de los enlaces en la navegación */
+        font-size: 16px;
       }
 
       footer .social-links a {
-        font-size: 18px; /* Reducir el tamaño de los enlaces sociales */
+        font-size: 18px;
       }
     }
 
     @media (max-width: 480px) {
       header {
-        font-size: 32px; /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+        font-size: 32px;
         padding: 30px 15px;
       }
 
@@ -184,7 +187,7 @@
       .gallery-item.portfolio,
       .gallery-item.sobre-mi,
       .gallery-item.contacto {
-        width: 90%; /* Hacer las imágenes más grandes en pantallas pequeñas */
+        width: 90%;
       }
 
       .overlay-text {
@@ -192,7 +195,7 @@
       }
 
       nav a {
-        font-size: 14px; /* Reducir aún más el tamaño de los enlaces en móviles */
+        font-size: 14px;
       }
 
       footer p {
@@ -200,35 +203,37 @@
       }
 
       footer img {
-        width: 30px; /* Reducir el tamaño de los íconos sociales */
+        width: 30px;
         height: 30px;
       }
     }
   </style>
 </head>
 <body>
-  <header><a href="index.html">Iván Vila Ventura</a></header>
-  <nav>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="sobre-mi.html">Sobre mí</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
+  <div class="main-content">
+    <header><a href="index.html">Iván Vila Ventura</a></header>
+    <nav>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
 
-  <div class="gallery">
-    <a href="sobre-mi.html" class="gallery-item sobre-mi">
-      <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20250103-WA0008.jpg?raw=true" alt="Sobre mí" />
-      <div class="overlay-text">Sobre mí</div>
-    </a>
+    <div class="gallery">
+      <a href="sobre-mi.html" class="gallery-item sobre-mi">
+        <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20250103-WA0008.jpg?raw=true" alt="Sobre mí" />
+        <div class="overlay-text">Sobre mí</div>
+      </a>
 
-    <a href="portfolio.html" class="gallery-item portfolio">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Portfolio" />
-      <div class="overlay-text">Portfolio</div>
-    </a>
+      <a href="portfolio.html" class="gallery-item portfolio">
+        <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_7903.jpg?raw=true" alt="Portfolio" />
+        <div class="overlay-text">Portfolio</div>
+      </a>
 
-    <a href="contacto.html" class="gallery-item contacto">
-      <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20230717-WA0018.jpg?raw=true" alt="Contacto" />
-      <div class="overlay-text">Contacto</div>
-    </a>
+      <a href="contacto.html" class="gallery-item contacto">
+        <img src="https://github.com/Ivanvila19/Ivanvila-portfolio/blob/main/IMG-20230717-WA0018.jpg?raw=true" alt="Contacto" />
+        <div class="overlay-text">Contacto</div>
+      </a>
+    </div>
   </div>
 
   <footer>
@@ -239,6 +244,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
