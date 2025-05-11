@@ -61,7 +61,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       padding: 15px;
       max-width: 1000px;
@@ -185,6 +185,7 @@
       }
 
       .gallery {
+        grid-template-columns: repeat(2, 1fr);
         padding: 10px;
         gap: 10px;
       }
@@ -195,7 +196,6 @@
         font-size: 24px;
       }
 
-      /* Ajuste del encabezado para móviles */
       header {
         font-size: clamp(48px, 7vw, 48px);
       }
