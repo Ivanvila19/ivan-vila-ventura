@@ -26,13 +26,14 @@
       font-weight: 500;
       letter-spacing: 1px;
     }
-   /* Estilo específico para el nombre "Iván Vila Ventura" */
+
     header a {
-      font-family: 'Arizonia', cursive; /* Aplicar la tipografía Arizonia */
-      font-size: 72px; /* Tamaño de fuente */
-      color: #000; /* Color negro */
-      text-decoration: none; /* Sin subrayado */
+      font-family: 'Arizonia', cursive;
+      font-size: 72px;
+      color: #000;
+      text-decoration: none;
     }
+
     nav {
       text-align: center;
       margin: 20px 0;
@@ -87,7 +88,6 @@
       transform: scale(1.05);
     }
 
-    /* Lightbox Styles */
     .lightbox {
       position: fixed;
       top: 0;
@@ -151,7 +151,6 @@
       margin-top: 10px;
     }
 
-    /* Instagram image size */
     footer img {
       width: 40px;
       height: 40px;
@@ -162,7 +161,6 @@
       transform: scale(1.1);
     }
 
-    /* Estilos del botón "Volver a Portfolio" */
     .back-button {
       display: inline-block;
       padding: 10px 20px;
@@ -188,6 +186,67 @@
       color: #fff;
     }
 
+    /* Optimización para móviles */
+    @media (max-width: 768px) {
+      header {
+        font-size: 42px;
+        padding: 30px 10px 10px;
+      }
+
+      header a {
+        font-size: 42px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 15px 10px;
+      }
+
+      nav a {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 20px 10px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .back-button {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin: 15px auto;
+      }
+
+      footer img {
+        width: 32px;
+        height: 32px;
+      }
+
+      footer p {
+        font-size: 12px;
+      }
+
+      .lightbox img {
+        max-width: 95%;
+        max-height: 80%;
+      }
+
+      .lightbox:after {
+        top: 20px;
+        right: 25px;
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -218,7 +277,6 @@
     </div>
   </div>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <img id="lightbox-img" src="" alt="Imagen ampliada">
   </div>
@@ -244,12 +302,11 @@
     });
   </script>
 
-  <!-- Botón Volver a Portfolio (antes del icono de Instagram) -->
-    <div style="margin-bottom: 20px; text-align: center;">
-      <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
-    </div>
-    
-    <footer>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
+  </div>
+  
+  <footer>
     <a href="https://www.instagram.com/ivanvila_photography/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
@@ -257,6 +314,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
