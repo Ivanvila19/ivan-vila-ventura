@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portraits</title>
 
-  <!-- Incluir la fuente de Google Fonts: Arizonia -->
   <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
   <style>
@@ -23,34 +22,29 @@
     }
 
     header {
-      padding: 40px 20px 10px;
+      padding: 30px 15px 10px;
       text-align: center;
-      font-size: 72px;
-      font-weight: 500;
-      letter-spacing: 1px;
+      font-size: 60px;
     }
 
-    /* Estilo específico para el nombre "Iván Vila Ventura" */
     .brand-name {
-      font-family: 'Arizonia', cursive; /* Usar la fuente Arizonia */
-      font-size: 72px; /* Tamaño de fuente */
-      font-weight: 500; /* Peso de la fuente */
-      letter-spacing: 1px; /* Espaciado entre letras */
-      color: #000; /* Color negro */
-      text-decoration: none; /* Sin subrayado */
+      font-family: 'Arizonia', cursive;
+      font-size: 60px;
+      color: #000;
+      text-decoration: none;
     }
 
     nav {
       text-align: center;
       margin: 20px 0;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       color: #000;
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 16px;
       transition: opacity 0.3s;
     }
 
@@ -60,17 +54,16 @@
 
     h1 {
       text-align: center;
-      margin: 30px 0 10px;
-      font-size: 32px;
-      font-weight: 600;
+      margin: 20px 0 10px;
+      font-size: 28px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 15px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -87,7 +80,6 @@
       object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
-      border-radius: 8px;
     }
 
     .gallery-item:hover img {
@@ -116,55 +108,19 @@
     }
 
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 90vw;
+      max-height: 90vh;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     .lightbox:after {
       content: "✕";
       position: absolute;
-      top: 30px;
-      right: 40px;
-      font-size: 30px;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
       color: white;
       cursor: pointer;
-    }
-
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer .social-links a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #000;
-      font-size: 20px;
-      transition: opacity 0.3s;
-    }
-
-    footer .social-links a:hover {
-      opacity: 0.6;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    footer img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-    }
-
-    footer img:hover {
-      transform: scale(1.1);
     }
 
     .back-button {
@@ -173,9 +129,7 @@
       background-color: transparent;
       color: #000;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 1px;
+      font-size: 16px;
       border: 1px solid #000;
       border-radius: 5px;
       text-align: center;
@@ -190,6 +144,101 @@
     .back-button:active {
       background-color: #000;
       color: #fff;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer img {
+      width: 36px;
+      height: 36px;
+      transition: transform 0.3s ease;
+    }
+
+    footer img:hover {
+      transform: scale(1.1);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        font-size: 48px;
+      }
+
+      .brand-name {
+        font-size: 48px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin: 5px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 85vh;
+      }
+
+      .back-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      footer img {
+        width: 30px;
+        height: 30px;
+      }
+
+      footer p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header, .brand-name {
+        font-size: 36px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .back-button {
+        font-size: 13px;
+        padding: 6px 14px;
+      }
+
+      footer p {
+        font-size: 11px;
+      }
     }
   </style>
 </head>
@@ -207,21 +256,11 @@
   <h1>Portraits</h1>
 
   <div class="gallery">
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portrait 1" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3772.jpg?raw=true" alt="Portrait 2" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8783.JPG?raw=true" alt="Portrait 3" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8784.JPG?raw=true" alt="Portrait 4" onclick="openLightbox(this.src)">
-    </div>
-    <div class="gallery-item">
-      <img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8790.JPG?raw=true" alt="Portrait 5" onclick="openLightbox(this.src)">
-    </div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3786.jpg?raw=true" alt="Portrait 1" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/_MG_3772.jpg?raw=true" alt="Portrait 2" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8783.JPG?raw=true" alt="Portrait 3" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8784.JPG?raw=true" alt="Portrait 4" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://raw.githubusercontent.com/Ivanvila19/Ivanvila-portfolio/main/Copia%20de%20IMG_8790.JPG?raw=true" alt="Portrait 5" onclick="openLightbox(this.src)"></div>
   </div>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
@@ -249,7 +288,7 @@
     });
   </script>
 
-  <div style="margin-bottom: 20px; text-align: center;">
+  <div style="text-align: center;">
     <a href="portfolio.html" class="back-button">Volver a Portfolio</a>
   </div>
 
@@ -261,6 +300,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
